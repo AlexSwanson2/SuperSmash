@@ -1,6 +1,7 @@
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
+import java.util.LinkedList;
 
 
 public abstract class EntityObject{
@@ -8,6 +9,7 @@ public abstract class EntityObject{
 	protected double x, y, VelX, VelY, width, height;
         protected ID id;
         SpriteSheet sprite;
+        LinkedList<Sound> sound;
 	
 
 	public EntityObject(double x, double y, double width, double height, double VelX, double VelY, ID id, BufferedImage spriteSheet) {

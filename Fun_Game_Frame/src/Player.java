@@ -18,6 +18,7 @@ public class Player extends EntityObject{
     private final Animation standing = new Animation(new BufferedImage[]{sprite.grabImage(1, 1)}, 0);
     private Animation animation = standing;
     
+    @Override
     public void tick() {
         if(jumping){
             tempJump++;
@@ -40,6 +41,7 @@ public class Player extends EntityObject{
     }
 
 
+    @Override
     public void render(Graphics g) {
       g.drawImage(animation.getSprite(), (int)x, (int)y, null);
     }   
@@ -47,6 +49,7 @@ public class Player extends EntityObject{
     
     public void jumping(Boolean jump){
         jumping = jump && isOnGround();
+        
     }
     
     

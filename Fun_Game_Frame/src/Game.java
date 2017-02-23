@@ -40,7 +40,7 @@ public class Game extends Canvas implements Runnable {
     public void init(){ 
             BufferedImageLoader loader = new BufferedImageLoader();
             try{ 
-                spriteSheet = loader.loadImage("/Character.png");
+                spriteSheet = loader.loadImage("Assets/Character.png");
             }
             catch(IOException e){e.printStackTrace();}
 
@@ -114,11 +114,12 @@ public class Game extends Canvas implements Runnable {
             stop();
     }
 
-
+    
     ////////Tick & Render/////////////
     private void tick(){
         handler.tick();
         keyIn.update();
+        
     }
 
     private void render(){
